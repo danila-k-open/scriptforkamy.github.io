@@ -1,4 +1,14 @@
-const tarotCards = [
+// Функция для получения случайной карты
+function getRandomTarot() {
+    const randomCard = tarotCards[Math.floor(Math.random() * tarotCards.length)];
+    return {
+        card: randomCard.card,
+        meaning: randomCard.meaning,
+        timestamp: new Date().toISOString()
+    };
+}
+$( document ).ready(function() {
+  const tarotCards = [
     {card: "🃏 ШУТ", meaning: "Начало нового пути, невинность, спонтанность. Время рисковать!"},
     {card: "✨ МАГ", meaning: "Сила воли, творчество, мастерство. Ты можешь всё!"},
     {card: "👑 ИМПЕРАТРИЦА", meaning: "Изобилие, красота, природа. Творчество и плодородие!"},
@@ -76,14 +86,6 @@ const tarotCards = [
     {card: "🪙 РЫЦАРЬ ПЕНТАКЛЕЙ", meaning: "Трудолюбие, надежность, прогресс!"},
     {card: "🪙 КОРОЛЕВА ПЕНТАКЛЕЙ", meaning: "Комфорт, безопасность, материнство!"},
     {card: "🪙 КОРОЛЬ ПЕНТАКЛЕЙ", meaning: "Успех, изобилие, лидерство!"}
-];
-
-// Функция для получения случайной карты
-function getRandomTarot() {
-    const randomCard = tarotCards[Math.floor(Math.random() * tarotCards.length)];
-    return {
-        card: randomCard.card,
-        meaning: randomCard.meaning,
-        timestamp: new Date().toISOString()
-    };
-}
+  ];
+    console.log(tarotCards[0];);
+});
