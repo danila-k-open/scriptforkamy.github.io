@@ -1,12 +1,3 @@
-// Функция для получения случайной карты
-function getRandomTarot() {
-    const randomCard = tarotCards[Math.floor(Math.random() * tarotCards.length)];
-    return {
-        card: randomCard.card,
-        meaning: randomCard.meaning,
-        timestamp: new Date().toISOString()
-    };
-}
 $( document ).ready(function() {
   const tarotCards = [
     {card: "🃏 ШУТ", meaning: "Начало нового пути, невинность, спонтанность. Время рисковать!"},
